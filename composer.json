@@ -45,7 +45,6 @@
         }
     },
 "require": {
-        "illuminate/support": "^8.14",
-        "orchestra/testbench": "^6.4"
+        "illuminate/support": "^8.14"
     }
 }
