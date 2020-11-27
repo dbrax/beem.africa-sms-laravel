@@ -37,7 +37,7 @@ class BongolivesmsLaravel
         ));
 
 
-        // Send the request
+        // Send  request
 $response = curl_exec($ch);
 
 // Check for errors
