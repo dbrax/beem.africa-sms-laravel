@@ -45,6 +45,6 @@
         }
     },
 "require": {
-        "illuminate/support": "^8.14.0"
+        "illuminate/support": "^7.29.3"
     }
 }
