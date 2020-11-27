@@ -1,11 +1,9 @@
 # Very short description of the package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/epmnzava/bongolivesms-laravel.svg?style=flat-square)](https://packagist.org/packages/epmnzava/bongolivesms-laravel)
-[![Build Status](https://img.shields.io/travis/epmnzava/bongolivesms-laravel/master.svg?style=flat-square)](https://travis-ci.org/epmnzava/bongolivesms-laravel)
-[![Quality Score](https://img.shields.io/scrutinizer/g/epmnzava/bongolivesms-laravel.svg?style=flat-square)](https://scrutinizer-ci.com/g/epmnzava/bongolivesms-laravel)
 [![Total Downloads](https://img.shields.io/packagist/dt/epmnzava/bongolivesms-laravel.svg?style=flat-square)](https://packagist.org/packages/epmnzava/bongolivesms-laravel)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+
 
 ## Installation
 
@@ -48,6 +46,3 @@ If you discover any security related issues, please email epmnzava@gmail.com ins
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
