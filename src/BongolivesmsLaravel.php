@@ -21,7 +21,7 @@ class BongolivesmsLaravel
             'recipients' => [array('recipient_id' => '1','dest_addr'=>$recipient_msisdn)]
         );
 
-        $ch = curl_init(config('bongolivesms-laravel.base_url'));
+        $ch = curl_init(config('bongolivesms-laravel.base_url')."/v1/send");
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
