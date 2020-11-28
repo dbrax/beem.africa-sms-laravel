@@ -23,12 +23,13 @@ Epmnzava\BongolivesmsLaravel\BongolivesmsLaravelServiceProvider::class,
 Add the facade to the aliases array in config/app.php:
 ```
 'BongolivesmsLaravel'=>Epmnzava\BongolivesmsLaravel\BongolivesmsLaravelFacade::class,
+```
+
 
 
 
 # Publish the package configuration (for Laravel 5.4 and below)
 Publish the configuration file and migrations by running the provided console command:
-```
 php artisan vendor:publish --provider="Epmnzava\BongolivesmsLaravel\BongolivesmsLaravelServiceProvider"
 ```
 ### Environmental Variables
