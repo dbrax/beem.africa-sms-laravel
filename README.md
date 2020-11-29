@@ -2,6 +2,8 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/epmnzava/bongolivesms-laravel.svg?style=flat-square)](https://packagist.org/packages/epmnzava/bongolivesms-laravel)
 [![Total Downloads](https://img.shields.io/packagist/dt/epmnzava/bongolivesms-laravel.svg?style=flat-square)](https://packagist.org/packages/epmnzava/bongolivesms-laravel)
+[![Emmanuel Mnzava](https://img.shields.io/badge/Author-Emmanuel%20Mnzava-green)](mailto:epmnzava@gmail.com)
+
 
 
 
