@@ -43,6 +43,8 @@ BONGO_LIVE_SECRET ` your provided bongolive secret`
 
 ``` php
 
+Sending to one msisdn at a time 
+
 <?php
 use BongolivesmsLaravel;
 
@@ -64,6 +66,28 @@ if(substr($recipient_msisdn, 0, 1)==0){
 
 }else{}
         $response=BongolivesmsLaravel::send__single_recipient($source_addr,$message,$recipient_msisdn);
+
+    }
+
+
+Sending multiple msisdn at one by passing an array of numbers
+
+<?php
+use BongolivesmsLaravel;
+
+class DashboardController extends Controller
+{
+    //
+
+
+    public function runSms(){
+
+//assuming $recipient_msisdn is your receipient number 
+//we need to change it from 0XXXX to 255XXX
+
+ 
+ $recipient_array=["255679079774","2556789909"];
+        $response=BongolivesmsLaravel::send__multiple_recipient($source_addr,$message,$recipient_array);
 
     }
 
