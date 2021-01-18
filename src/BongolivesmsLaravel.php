@@ -42,6 +42,7 @@ $response = curl_exec($ch);
 
  $response_array=json_decode($response);
 
+ /*
  if($response_array->code==100){
 //it is successful
 $response_data=["status"=>"1","message"=>$response_array->message,"request_id"=>$response_array->request_id];
@@ -49,10 +50,10 @@ $response_data=["status"=>"1","message"=>$response_array->message,"request_id"=>
  }
  else
  $response_data=["status"=>"0","message"=>"Not successful","request_id"=>"0"];
-
+*/
 
  
-return $response_data;
+return json_encode($response_array);
  
 
 
