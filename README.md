@@ -24,7 +24,7 @@ Epmnzava\BongolivesmsLaravel\BongolivesmsLaravelServiceProvider::class,
 ```
 Add the facade to the aliases array in config/app.php:
 ```
-'BongolivesmsLaravel'=>Epmnzava\BongolivesmsLaravel\BongolivesmsLaravelFacade::class,
+'Bongolive'=>Epmnzava\BongolivesmsLaravel\BongolivesmsLaravelFacade::class,
 ```
 
 
@@ -32,8 +32,9 @@ Add the facade to the aliases array in config/app.php:
 
 # Publish the package configuration (for Laravel 5.4 and below)
 Publish the configuration file and migrations by running the provided console command:
+```
 php artisan vendor:publish --provider="Epmnzava\BongolivesmsLaravel\BongolivesmsLaravelServiceProvider"
-
+```
 ### Environmental Variables
 
 BONGO_LIVE_KEY `your provided bongolive api key `
@@ -46,7 +47,7 @@ BONGO_LIVE_SECRET ` your provided bongolive secret`
 Sending to one msisdn at a time 
 
 <?php
-use BongolivesmsLaravel;
+use Bongolive;
 
 class DashboardController extends Controller
 {
@@ -65,7 +66,7 @@ if(substr($recipient_msisdn, 0, 1)==0){
 
 
 }else{}
-        $response=BongolivesmsLaravel::send__single_recipient($source_addr,$message,$recipient_msisdn);
+        $response=Bongolive::send__single_recipient($source_addr,$message,$recipient_msisdn);
 
     }
 
