@@ -74,7 +74,7 @@ if(substr($recipient_msisdn, 0, 1)==0){
 Sending multiple msisdn at one by passing an array of numbers
 
 <?php
-use BongolivesmsLaravel;
+use Bongolive;
 
 class DashboardController extends Controller
 {
@@ -88,7 +88,7 @@ class DashboardController extends Controller
 
  
  $recipient_array=["255679079774","2556789909"];
-        $response=BongolivesmsLaravel::send__multiple_recipient($source_addr,$message,$recipient_array);
+        $response=Bongolive::send__multiple_recipient($source_addr,$message,$recipient_array);
 
     }
 
