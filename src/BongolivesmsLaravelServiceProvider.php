@@ -21,7 +21,7 @@ class BongolivesmsLaravelServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('bongolivesms-laravel.php'),
+                __DIR__ . '/../config/config.php' => config_path('bongolivesms-laravel.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,7 +50,7 @@ class BongolivesmsLaravelServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'bongolivesms-laravel');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'bongolivesms-laravel');
 
         // Register the main class to use with the facade
         $this->app->singleton('bongolivesms-laravel', function () {
