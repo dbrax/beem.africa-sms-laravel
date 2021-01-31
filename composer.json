@@ -1,6 +1,6 @@
 {
     "name": "epmnzava/bongolivesms-laravel",
-    "description": "This is a laravel package for intergration with bongolive  bulk sms online api",
+    "description": "A laravel package for intergration with bongolive  bulk sms online api",
     "keywords": [
         "epmnzava",
         "bongolivesms-laravel"
@@ -45,6 +45,10 @@
         }
     },
 "require": {
-        "illuminate/support": "^6.0|^7.0|^8.0"
+        "illuminate/support": "^7.0|^8.0"
+    }
+    ,
+      "require-dev": {
+        "phpunit/phpunit": "5.0.*"
     }
 }
