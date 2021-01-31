@@ -1,10 +1,17 @@
 <?php
 
+/**
+ * Author: Emmanuel Paul Mnzava
+ * Twitter: @epmnzava
+ * Github:https://github.com/dbrax/tigopesa-tanzania
+ * Email: epmnzava@gmail.com
+ * 
+ */
+
 namespace Epmnzava\BongolivesmsLaravel;
 
 class BongolivesmsLaravel
 {
-    // Build your next great package.
 
     /**
      * Function to send a message to only one msisdn
