@@ -6,9 +6,9 @@
 return [
 
 
-    'api_key'=>env("BONGO_LIVE_KEY"),
+    'api_key'=>env("BEEM_LIVE_KEY"),
 
-    'secret_key'=>env("BONGO_LIVE_SECRET"),
+    'secret_key'=>env("BEEM_LIVE_SECRET"),
 
     'base_url'=>"https://apisms.bongolive.africa"
 
