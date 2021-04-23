@@ -3,7 +3,7 @@
 /**
  * Author: Emmanuel Paul Mnzava
  * Twitter: @epmnzava
- * Github:https://github.com/dbrax/tigopesa-tanzania
+ * Github: https://github.com/dbrax/beem.africa-sms-laravel
  * Email: epmnzava@gmail.com
  * 
  */
@@ -29,7 +29,7 @@ class BongolivesmsLaravelServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('bongolivesms-laravel.php'),
+                __DIR__ . '/../config/config.php' => config_path('beemafrica.php'),
             ], 'config');
 
             // Publishing the views.

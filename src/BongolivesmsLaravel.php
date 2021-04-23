@@ -3,7 +3,7 @@
 /**
  * Author: Emmanuel Paul Mnzava
  * Twitter: @epmnzava
- * Github:https://github.com/dbrax/tigopesa-tanzania
+ * Github: https://github.com/dbrax/beem.africa-sms-laravel
  * Email: epmnzava@gmail.com
  * 
  */
@@ -13,20 +13,36 @@ namespace Epmnzava\BongolivesmsLaravel;
 class BongolivesmsLaravel
 {
 
+
+    private $api_key;
+
+    private $secret_key;
+
+    private $base_url;
+
+    private $sender_id;
+
+    public function __construct()
+    {
+        $this->api_key = config("beemafrica.api_key");
+        $this->secret_key = config("beemafrica.secret_key");
+        $this->base_url = config('beemafrica.base_url');
+        $this->sender_id=config('beemafrica.senderid');
+    }
+
+
+
     /**
      * Function to send a message to only one msisdn
      */
     public function send__single_recipient($source_addr, $message, $recipient_msisdn)
     {
 
-        //get api keys from config files
-        $api_key = config("bongolivesms-laravel.api_key");
-        $secret_key = config("bongolivesms-laravel.secret_key");
 
 
         //create an array of objects or data to be sent
         $postData = array(
-            'source_addr' => $source_addr,
+            'source_addr' => $this->sender_id,
             'encoding' => 0,
             'schedule_time' => '',
             'message' => $message,
@@ -35,7 +51,7 @@ class BongolivesmsLaravel
 
 
         //call a curl request  (Will create a separate class for curl get and post requests)
-        $ch = curl_init(config('bongolivesms-laravel.base_url') . "/v1/send");
+        $ch = curl_init($this->base_url . "/v1/send");
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
@@ -44,14 +60,13 @@ class BongolivesmsLaravel
             CURLOPT_POST => TRUE,
             CURLOPT_RETURNTRANSFER => TRUE,
             CURLOPT_HTTPHEADER => array(
-                'Authorization:Basic ' . base64_encode("$api_key:$secret_key"),
+                'Authorization:Basic ' . base64_encode("$this->api_key:$this->secret_key"),
                 'Content-Type: application/json'
             ),
             CURLOPT_POSTFIELDS => json_encode($postData)
         ));
 
         $response_data = [];
-        // Send  request
         $response = curl_exec($ch);
 
         $response_array = json_decode($response);
@@ -75,20 +90,17 @@ class BongolivesmsLaravel
         for ($i = 0; $i < count($recipient_array); $i++)
             array_push($receipients, array('recipient_id' => $i, 'dest_addr' => $recipient_array[$i]));
 
-        $api_key = config("bongolivesms-laravel.api_key");
-        $secret_key = config("bongolivesms-laravel.secret_key");
-
-
+   
 
         $postData = array(
-            'source_addr' => $source_addr,
+            'source_addr' => $this->sender_id,
             'encoding' => 0,
             'schedule_time' => '',
             'message' => $message,
             'recipients' => $receipients
         );
 
-        $ch = curl_init(config('bongolivesms-laravel.base_url') . "/v1/send");
+        $ch = curl_init($this->base_url. "/v1/send");
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
@@ -97,7 +109,7 @@ class BongolivesmsLaravel
             CURLOPT_POST => TRUE,
             CURLOPT_RETURNTRANSFER => TRUE,
             CURLOPT_HTTPHEADER => array(
-                'Authorization:Basic ' . base64_encode("$api_key:$secret_key"),
+                'Authorization:Basic ' . base64_encode("$this->api_key:$this->secret_key"),
                 'Content-Type: application/json'
             ),
             CURLOPT_POSTFIELDS => json_encode($postData)

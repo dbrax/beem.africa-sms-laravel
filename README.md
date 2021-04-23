@@ -9,8 +9,8 @@
 
 ## Installation
 
-- Laravel Version: ˆ7.2 
-- PHP Version: 7.2
+- Laravel Version: => 7.1 
+- PHP Version: => 7.1
 You can install the package via composer:
 
 ```bash
@@ -37,8 +37,9 @@ php artisan vendor:publish --provider="Epmnzava\BongolivesmsLaravel\Bongolivesms
 ```
 ### Environmental Variables
 
-BONGO_LIVE_KEY `your provided bongolive api key `
-BONGO_LIVE_SECRET ` your provided bongolive secret`
+BEEM_LIVE_KEY `your provided beemafrica api key `
+BEEM_LIVE_SECRET ` your provided beemafrica secret`
+BEEM_SENDERID ` your provided beemafrica senderid`
 
 ## Usage
 

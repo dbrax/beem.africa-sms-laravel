@@ -3,7 +3,7 @@
 /**
  * Author: Emmanuel Paul Mnzava
  * Twitter: @epmnzava
- * Github:https://github.com/dbrax/tigopesa-tanzania
+ * Github: https://github.com/dbrax/beem.africa-sms-laravel
  * Email: epmnzava@gmail.com
  * 
  */
