@@ -38,7 +38,9 @@ php artisan vendor:publish --provider="Epmnzava\BongolivesmsLaravel\Bongolivesms
 ### Environmental Variables
 
 BEEM_LIVE_KEY `your provided beemafrica api key `
+
 BEEM_LIVE_SECRET ` your provided beemafrica secret`
+
 BEEM_SENDERID ` your provided beemafrica senderid`
 
 ## Usage
