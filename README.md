@@ -1,4 +1,4 @@
-# Very short description of the package
+# Beem Africa Sms PHP Package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/epmnzava/bongolivesms-laravel.svg?style=flat-square)](https://packagist.org/packages/epmnzava/bongolivesms-laravel)
 [![Total Downloads](https://img.shields.io/packagist/dt/epmnzava/bongolivesms-laravel.svg?style=flat-square)](https://packagist.org/packages/epmnzava/bongolivesms-laravel)
