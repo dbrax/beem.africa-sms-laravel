@@ -9,8 +9,8 @@
 
 ## Installation
 
-- Laravel Version: => 7.1 
-- PHP Version: => 7.1
+- Laravel Version: => 8.0 
+- PHP Version: => 8.0
 You can install the package via composer:
 
 ```bash
